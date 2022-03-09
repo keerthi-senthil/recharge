@@ -1,0 +1,52 @@
+<div class="example-container">
+  <form [formGroup]="PlanDetails" >
+    <mat-form-field hidden appearance="outline">
+      <mat-label hidden>id</mat-label>
+      <input hidden matInput placeholder="Enter plan name" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Enter plan name</mat-label>
+        <input matInput placeholder="Enter plan name" formControlName="planName">
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter the plan price</mat-label>
+        <input matInput placeholder="Enter the plan price" formControlName="planPrice">
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter plan type</mat-label>
+        <mat-select formControlName="planType">
+            <mat-option value="prepaid">Prepaid</mat-option>
+            <mat-option value="postpaid">Postpaid</mat-option>
+            <mat-option value="addons">AddOns</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter the offer for the plan</mat-label>
+        <mat-select formControlName="planOffers">
+            <mat-option value="netflix">Netflix</mat-option>
+            <mat-option value="amazon">Amazon</mat-option>
+            <mat-option value="hotstar">Hotstar</mat-option>
+            <mat-option value="noOffer">None</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter plan validity</mat-label>
+        <input matInput placeholder="Enter plan validity" formControlName="planValidity">
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter plan description</mat-label>
+        <textarea matInput placeholder="Enter plan description" formControlName="planDescription"></textarea>
+      </mat-form-field>
+  </form>
+
+  <div mat-dialog-action [align]="'end'">
+      <button mat-raised-button color="warn" (click)="addPlan()">{{actionBtn}}</button>
+      <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </div>
+</div>

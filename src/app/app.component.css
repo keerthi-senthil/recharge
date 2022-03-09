@@ -1,0 +1,71 @@
+.example-button{
+    margin-left: 400px;
+    
+}
+.example-label {
+    background-color: #900000;
+    color: white;
+   
+    
+}
+.example-button-row,.example-button{
+    color: white;
+}
+.lab{
+    
+    margin-right: 430px;
+}
+@media screen and (max-width: 1024px){
+    .lab{
+        margin-right: 50px; 
+
+
+    }
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+
+@media screen and (max-width: 1024px){
+.example-button{
+    
+    margin-left: 180px;
+}
+table {
+    width: 50%;
+  }
+  
+  .mat-form-field {
+    font-size: 10px;
+    width: 70%;
+  }
+.container{
+    max-width: 300px;
+    margin: 0 auto;
+}
+}
+
+
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+
+
