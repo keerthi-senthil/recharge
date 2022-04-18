@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <button mat-button (click)="openpop()"><h4>Popular plans</h4></button>
+    <span class="exam-spacer"></span>
+    <mat-icon>supervised_user_circle</mat-icon>
+    <button mat-button (click)="openDia()"><h4>Addon</h4></button>
+    
+    
+    <span class="exam-space"></span>
+    <mat-icon>supervised_user_circle</mat-icon>
+    <button mat-button (click)="openBox()">
+      <h4>Notifications</h4></button>
+    <span class="example-spacer"></span>
+    <div (click)="openPlan()">
+    <button mat-raised-button color="warn">Logout</button></div>
+    
+    
+  </mat-toolbar>
+
+  <!-- <mat-grid-list *ngFor="let planDetail of planDetails; let i = index;" cols={{planDetails.length/2}}>
+    <mat-grid-tile>
+      
+    </mat-grid-tile>
+  </mat-grid-list> -->
+  <div class="ss-box">
+    <mat-card *ngFor="let rechargeDetail of rechargeDetails; let i = index;">
+      <div class="card-title">RechargeType: {{rechargeDetail.rechargeType}}</div>
+      <div class="card-text">RechargeEmail: {{rechargeDetail.rechargeEmail}}</div>
+      <div class="card-text">RechargeName: {{rechargeDetail.rechargeName}}</div>
+      <div class="card-text">RechargePlan: {{rechargeDetail.rechargePlan}}</div>
+      <div class="card-text">RechargePrice: {{rechargeDetail.rechargePrice}}</div>
+      <div class="card-text">RechargeNumber: {{rechargeDetail.rechargeNumber}}</div>
+     
+  </mat-card>
+</div>

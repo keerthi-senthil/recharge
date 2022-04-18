@@ -1,0 +1,9 @@
+.exam-spacer {
+    flex: 1.5 2 auto;
+  }
+  .exam-space {
+      flex: 1.5 2 auto;
+    }
+  .example-spacer {
+      flex: 1 2 auto;
+    }

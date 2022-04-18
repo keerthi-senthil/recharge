@@ -1,0 +1,56 @@
+<div id="Editplan" class="example-container">
+  <mat-toolbar-row >
+    <h1 style="color:#f44236;"><b>Edit Plan</b></h1>
+    </mat-toolbar-row>
+    <form #editForm="ngForm" ngFor="let editPlan of plan" [formGroup]="editPlanData">
+      <mat-form-field hidden appearance="outline">
+        <mat-label >id</mat-label>
+        <input matInput value="id" id="id" formControlName="id">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+          <mat-label>Enter plan name</mat-label>
+          <input matInput placeholder="Enter plan name" id="editPlanName" formControlName="planName" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter the plan price</mat-label>
+          <input matInput placeholder="Enter the plan price" type="number" id="editPlanPrice" formControlName="planPrice" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan type</mat-label>
+          <mat-select id="editPlanType" formControlName="planType" required>
+              <mat-option value="Postpaid">Postpaid</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter the offer for the plan</mat-label>
+          <mat-select id="editPlanOffers" formControlName="planOffers" required>
+              <mat-option value="Netflix">Netflix</mat-option>
+              <mat-option value="Amazon">Amazon</mat-option>
+              <mat-option value="Hotstar">Hotstar</mat-option>
+              <mat-option value="No Offer">None</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan validity</mat-label>
+          <input matInput placeholder="Enter plan validity" id="editPlanValidity" formControlName="planValidity" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan description</mat-label>
+          <textarea matInput placeholder="Enter plan description" id="editPlanDescription" formControlName="planDescription" required></textarea>
+        </mat-form-field>
+    </form>
+  
+    <div mat-dialog-action [align]="'end'">
+        <button class="save-btn" id="updatePlan" mat-raised-button color="warn" [disabled]="editForm.invalid" routerLink="/postpaid" (click)=OnUpdatePlan()>Update Plan</button>
+    </div>
+  </div>
+  
+  
+  
+  

@@ -6,29 +6,29 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminApiService { 
+export class PostpaidApiService { 
   private apiServerUrl=environment.apiBaseUrl;
   
   constructor(private http : HttpClient) { }
   
   public getPlans(): Observable<Plan[]> {
-    return this.http.get<Plan[]>(`${this.apiServerUrl}/prepaid-plan/all`);
+    return this.http.get<Plan[]>(`${this.apiServerUrl}/postpaid-plan/all`);
   }
   public getPlanData(planId:number): Observable<Plan>{
-    return this.http.get<Plan>(`${this.apiServerUrl}/prepaid-plan/find/`+planId);
+    return this.http.get<Plan>(`${this.apiServerUrl}/postpaid-plan/find/`+planId);
 
   }
 
   public addPlan(plan: Plan): Observable<Plan> {
-    return this.http.post<Plan>(`${this.apiServerUrl}/prepaid-plan/add`, plan);
+    return this.http.post<Plan>(`${this.apiServerUrl}/postpaid-plan/add`, plan);
   }
 
   updatePlan(planId:number,plan:Plan): Observable<Plan>{
-    return this.http.put<Plan>(`${this.apiServerUrl}/prepaid-plan/update/`+planId,plan);
+    return this.http.put<Plan>(`${this.apiServerUrl}/postpaid-plan/update/`+planId,plan);
   }
 
   public deletePlan(planId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/prepaid-plan/delete/${planId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/postpaid-plan/delete/${planId}`);
   }
 
   

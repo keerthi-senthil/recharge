@@ -1,0 +1,56 @@
+<div id="Addplan" class="example-container">
+    <mat-toolbar-row >
+      <h1 style="color:#f44236;"><b>Add Plan</b></h1>
+      </mat-toolbar-row>
+    <form #addForm="ngForm">
+      <mat-form-field hidden appearance="outline">
+        <mat-label hidden>id</mat-label>
+        <input hidden  matInput placeholder="Enter plan name" ngModel name="id">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+          <mat-label>Enter plan name</mat-label>
+          <input matInput placeholder="Enter plan name" id="planName" ngModel name="planName" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter the plan price</mat-label>
+          <input matInput placeholder="Enter the plan price" type="number" id="planPrice" ngModel name="planPrice" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan type</mat-label>
+          <mat-select id="planType" ngModel name="planType" required>
+              <mat-option value="Prepaid">Prepaid</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter the offer for the plan</mat-label>
+          <mat-select id="planOffers" ngModel name="planOffers" required>
+              <mat-option value="Netflix">Netflix</mat-option>
+              <mat-option value="Amazon">Amazon</mat-option>
+              <mat-option value="Hotstar">Hotstar</mat-option>
+              <mat-option value="No Offer">None</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan validity</mat-label>
+          <input matInput placeholder="Enter plan validity" id="planValidity" ngModel name="planValidity" required>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Enter plan description</mat-label>
+          <textarea matInput placeholder="Enter plan description" id="planDescription" ngModel name="planDescription" required></textarea>
+        </mat-form-field>
+    </form>
+  
+    <div mat-dialog-action [align]="'end'">
+        <button class="save-btn" id="addPlan" [disabled]="addForm.invalid" mat-raised-button color="warn" (click)="OnAddPlan(addForm)">Add Plan</button>
+    </div>
+  </div>
+  
+  
+  
+  

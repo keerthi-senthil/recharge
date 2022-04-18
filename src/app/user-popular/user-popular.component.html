@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <button mat-button (click)="openpop()" ><h4>Popular plans</h4></button>
+    <span class="exam-spacer"></span>
+    <mat-icon>supervised_user_circle</mat-icon>
+    <button mat-button (click)="openDia()"><h4>Addon</h4></button>
+    
+    
+    <span class="exam-space"></span>
+    <mat-icon>supervised_user_circle</mat-icon>
+    <button mat-button (click)="openBox()">
+      <h4>Notifications</h4></button>
+    <span class="example-spacer"></span>
+    <div (click)="openPlan()">
+    <button mat-raised-button color="warn">Logout</button></div>
+    
+    
+  </mat-toolbar>
+
+  <!-- <mat-grid-list *ngFor="let planDetail of planDetails; let i = index;" cols={{planDetails.length/2}}>
+    <mat-grid-tile>
+      
+    </mat-grid-tile>
+  </mat-grid-list> -->
+  <div class="ss-box">
+    <mat-card *ngFor="let planDetail of planDetails; let i = index;">
+      <div class="card-title">PlanName: {{planDetail.planName}}</div>
+      <div class="card-text">PlanPrice: {{planDetail.planPrice}}</div>
+      <div class="card-text">PlanType: {{planDetail.planType}}</div>
+      <div class="card-text">PlanOffers: {{planDetail.planOffers}}</div>
+      <div class="card-text">PlanValidity: {{planDetail.planValidity}}</div>
+      <div class="card-text">PlanDescription: {{planDetail.planDescription}}</div>
+      <div mat-dialog-action [align]="'center'">
+        <button style="margin-left: 8px;" mat-raised-button color="warn"(click)="onClick()" id="addonsGrid1"><strong>></strong></button>
+      </div>
+  </mat-card>
+</div>
